@@ -1,0 +1,264 @@
+
+.olx-navbar {
+    width: 100%;
+    background: #ffffff;
+    color: #002f34;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.08);
+}
+
+/* TOP NAVBAR */
+
+.navbar-top {
+    min-height: 76px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 10px 25px;
+    background: #f7faff;
+}
+
+.navbar-logo {
+    font-size: 36px;
+    font-weight: 900;
+    letter-spacing: -3px;
+    color: #0866dc;
+    text-decoration: none;
+    margin-right: 5px;
+}
+
+.navbar-logo span {
+    color: #23e5db;
+}
+
+/* LOCATION */
+
+.navbar-location {
+    width: 230px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 0 15px;
+    border: 1px solid #d4d4d4;
+    border-radius: 30px;
+    background: white;
+    flex-shrink: 0;
+}
+
+.location-icon {
+    font-size: 19px;
+}
+
+.navbar-location input {
+    width: 100%;
+    border: none;
+    outline: none;
+    font-size: 15px;
+    color: #002f34;
+}
+
+/* SEARCH */
+
+.navbar-search {
+    height: 48px;
+    display: flex;
+    align-items: center;
+    flex: 1;
+    min-width: 100px;
+    border: 1px solid #d4d4d4;
+    border-radius: 30px;
+    overflow: hidden;
+    background: white;
+}
+
+.navbar-search input {
+    height: 100%;
+    flex: 1;
+    min-width: 0;
+    padding: 0 25px;
+    border: none;
+    outline: none;
+    font-size: 15px;
+}
+
+.navbar-search button {
+    width: 48px;
+    height: 42px;
+    margin: 3px;
+    border: none;
+    border-radius: 50%;
+    background: #0866dc;
+    color: white;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+/* WISHLIST AND LOGIN */
+
+.navbar-link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2px;
+    min-width: 48px;
+    border: none;
+    background: transparent;
+    color: #002f34;
+    font-size: 12px;
+    font-weight: 600;
+    text-decoration: none;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+.navbar-icon {
+    font-size: 27px;
+    line-height: 28px;
+}
+
+.navbar-link:hover {
+    color: #0866dc;
+}
+
+.logout-button {
+    font-family: inherit;
+}
+
+/* POST AD */
+
+.post-ad {
+    border: 5px solid #23e5db;
+    border-bottom-color: #ffce32;
+    border-left-color: #ffce32;
+    border-radius: 30px;
+    background: white;
+    color: #002f34;
+    padding: 8px 15px;
+    font-weight: 700;
+    font-size: 13px;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+.post-ad span {
+    font-size: 19px;
+}
+
+/* BOTTOM NAVBAR */
+
+.navbar-bottom {
+    min-height: 58px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 8px 5%;
+    border-top: 1px solid #eee;
+}
+
+.all-categories {
+    padding: 11px 18px;
+    border: none;
+    border-radius: 25px;
+    background: white;
+    color: #002f34;
+    font-weight: 700;
+    white-space: nowrap;
+    cursor: pointer;
+}
+
+.all-categories.active {
+    background: #0866dc;
+    color: white;
+}
+
+.navbar-categories {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    overflow-x: auto;
+    scrollbar-width: none;
+}
+
+.navbar-categories::-webkit-scrollbar {
+    display: none;
+}
+
+.nav-category {
+    padding: 10px 15px;
+    border: 1px solid #ddd;
+    border-radius: 25px;
+    background: white;
+    color: #333;
+    font-size: 13px;
+    white-space: nowrap;
+    cursor: pointer;
+}
+
+.nav-category:hover,
+.nav-category.selected {
+    border-color: #002f34;
+    background: #e8f8f7;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 850px) {
+    .navbar-top {
+        flex-wrap: wrap;
+        padding: 10px 15px;
+        gap: 10px;
+    }
+
+    .navbar-location {
+        width: 180px;
+    }
+
+    .navbar-search {
+        order: 5;
+        flex-basis: 100%;
+    }
+
+    .navbar-bottom {
+        padding: 8px 15px;
+    }
+}
+
+@media (max-width: 500px) {
+    .navbar-logo {
+        font-size: 29px;
+    }
+
+    .navbar-location {
+        flex: 1;
+        width: auto;
+        height: 40px;
+    }
+
+    .navbar-link {
+        min-width: 38px;
+        font-size: 10px;
+    }
+
+    .navbar-icon {
+        font-size: 22px;
+    }
+
+    .post-ad {
+        padding: 6px 9px;
+        border-width: 3px;
+        font-size: 11px;
+    }
+
+    .navbar-search {
+        height: 43px;
+    }
+
+    .navbar-search input {
+        padding: 0 12px;
+        font-size: 13px;
+    }
+}
